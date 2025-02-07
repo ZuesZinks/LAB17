@@ -9,6 +9,7 @@ vector<int> randomVector(unsigned int N){
     for(unsigned int i = 0; i < N; i++) v.push_back(rand()%10);
     return v;
 }
+
 void showVector(vector<int> v){
 	cout << "[";
 	for(unsigned int i = 0; i < v.size(); i++){
@@ -17,11 +18,13 @@ void showVector(vector<int> v){
 		else cout << " ";
 	}
 }
+
 int dotProduct(vector<int> x, vector<int> y){
 	int sum = 0;
 	for(unsigned int i = 0; i < x.size(); i++) sum += x[i] * y[i];	
 	return sum;
 }
+
 int main(){
 	srand(time(0));
 	vector<int> x = randomVector(5);
@@ -31,5 +34,6 @@ int main(){
 	cout << " . ";
 	showVector(y);
 	cout << " = " << z;
+	
 	return 0;
 }
